@@ -1,0 +1,20 @@
+import random
+def menu_juego():
+    print("MENU DEL JUEGO")
+    print("--------------")
+    print("1.jugar")
+    print("2.")
+
+salud_user = 250
+def curarse_user(salud_user):
+      eleccion = True
+      if eleccion:
+         if salud_user >= 250:
+            print("no puedes curarte mas, tienes la vida al maximo.")
+         else:
+            curarse = random.randint(30,60)
+            salud_user = salud_user + curarse
+            if salud_user > 250:
+                salud_user = 250
+                print("Te curaste:", curarse, "de vida")
+                print("ahora tienes",salud_user, "de vida")
